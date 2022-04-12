@@ -1,0 +1,13 @@
+def bubble_sort array
+  array.length.times do 
+    array.each_with_index do |number, index|  
+      if index == array.length-1
+        break
+      elsif number > array[index+1] 
+        array.slice!(index)
+        array.insert(index+1, number)
+      end
+    end
+  end
+  p array
+end
